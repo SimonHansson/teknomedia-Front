@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+
+.navbar{
+    background-color: #293744 !important; 
+    color: white !important;
+}
+
+.nav-link{
+    color: white;
+}
+
+.main-content{
+    background: white;
+    
+    padding: 5%;
+    border: solid 1px black;
+    border-radius: 8px 8px;
+}
+
+.category-link{
+    color: #0000EE;
+    cursor: pointer;
+}
+
+footer {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    color: white;
+    background-color:lightgray;
+    border-bottom: solid;
+    border-bottom-color: white;
+    margin-top: 30px;
+}
+
+.headResize{
+    font-size:4vw;
+}
+
+
+
+

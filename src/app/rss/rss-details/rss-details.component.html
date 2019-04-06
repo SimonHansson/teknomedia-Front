@@ -1,0 +1,51 @@
+<div class="container w-75 mt-2">
+    <div class="main-content shadow row">
+
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="display-4 headResize">{{rssSource.Title}}</h1>
+            <hr>
+          </div>
+
+          <div class="col-md-12">
+            <p>{{rssSource.Description}}</p>
+            <p>{{rssSource.Copyright}} </p>
+            <a target="_blank" href="{{rssSource.Link}}">{{rssSource.Link}}</a>
+          </div>
+        </div>
+        <br>
+      </div>
+
+      <div class="container" *ngFor='let rss of rssSource.rsses' style="margin-top:30px;">
+
+        <div class="row">
+          <div class="col-md-12">
+            <h5>{{rss.Title}}</h5>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-2">
+            <div [innerHTML]=rss.Image></div>
+          </div>
+
+          <div class="col-md-5">
+            <div [innerHTML]=rss.Description></div>
+          </div>
+
+          <div class="col-md-2">
+            <span *ngIf=rss.Category [routerLink]="[ '/category', rss.Category]" class="category-link">#{{rss.Category}}
+              <br /> </span>
+            <a target="_blank" href="{{rss.Link}}">Länk</a>
+          </div>
+
+          <div class="col-md-3">
+            <span>{{rss.Source}}</span> <br /><span>{{rss.PubDate | date : "y-MM-dd h:mm" }}</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+</div>
